@@ -35,7 +35,7 @@ function lcd () {
   cd "$@" && ls
 }
 # Set keybindings for vim mode by default
-bindkey -v
+# bindkey -v
 
 # Special keys to work:
 

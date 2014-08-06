@@ -1,0 +1,10 @@
+'editor':
+  'fontSize': 13
+  'showIndentGuide': true
+'core':
+  'themes': [
+    'atom-dark-ui'
+    'monokai'
+  ]
+'welcome':
+  'showOnStartup': false

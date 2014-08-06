@@ -30,9 +30,7 @@ brew install zsh
 brew cask install adium
 brew cask install atom
 brew cask install dropbox
-brew cask install flux
 brew cask install google-chrome
-brew cask install handbrake
 brew cask install iterm2
 brew cask install skype
 brew cask install spotify
@@ -61,6 +59,18 @@ cd ~/.vim/bundle/YouCompleteMe
 ./install.sh --clang-completer
 cd ~
 
+
+# Setting up Atom + Packages
+apm install \
+  autocomplete-plus \
+  file-icons \
+  linter \
+  linter-jshint \
+  minimap \
+  monokai
+
+ln -s ~/.dotfiles/config.cson ~/.atom/config.cson
+
 # Configure location of iterm2 preferences
 defaults write com.googlecode.iterm2 PrefsCustomFolder "/Users/$(whoami)/.dotfiles/"
 
@@ -69,8 +79,8 @@ ln -s ~/.dotfiles/gitignore_global ~/.gitignore_global
 git config --global core.excludesfile '~/.gitignore'
 
 # Configure git user (You will likely want to change this)
-git config --global user.name "Christian"
-git config --global user.email christiansherland@gmail.com
+git config --global user.name "Sameer"
+git config --global user.email schauhan19@gmail.com
 
 # Configure htop to display information properly (requires sudo)
 sudo chown root:wheel /usr/local/Cellar/htop-osx/0.8.2.2/bin/htop
