@@ -35,11 +35,9 @@ function lcd () {
   cd "$@" && ls
 }
 # Set keybindings for vim mode by default
-# bindkey -v
+bindkey -v
 
 # Special keys to work:
-
-
 
 # create a zkbd compatible hash;
 # to add other keys to this hash, see: man 5 terminfo
