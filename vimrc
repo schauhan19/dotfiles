@@ -13,25 +13,26 @@ filetype off
 let hasVundle=1
 let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
 if !filereadable(vundle_readme)
-    echo "Installing Vundle.."
-    echo ""
-    silent !mkdir -p ~/.vim/bundle
-    silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
-    let hasVundle=0
+  echo "Installing Vundle.."
+  echo ""
+  silent !mkdir -p ~/.vim/bundle
+  silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+  let hasVundle=0
 endif
 
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " Plugins
+Plugin 'airblade/vim-gitgutter'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
 Plugin 'bling/vim-bufferline'
 Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'ervandew/supertab'
 Plugin 'honza/vim-snippets'
-Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'pangloss/vim-javascript'
+Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
@@ -43,9 +44,9 @@ Plugin 'marijnh/tern_for_vim'
 
 " ...All your other bundles...
 if hasVundle == 0
-    echo "Installing Plugins, please ignore key map error messages"
-    echo ""
-    :PluginInstall
+  echo "Installing Plugins, please ignore key map error messages"
+  echo ""
+  :PluginInstall
 endif
 
 filetype plugin indent on
@@ -53,6 +54,7 @@ filetype plugin indent on
 " Better color stuff
 set background=dark
 colorscheme solarized
+let g:solarized_contrast = "high"
 
 " Map leader to comma
 let mapleader=","
@@ -63,6 +65,9 @@ set nofoldenable
 " Fix wrapping behavior when moving
 nmap j gj
 nmap k gk
+
+" Fix performance on long lines
+au BufNewFile,BufRead *.css set synmaxcol=120
 
 " move to beginning/end of line
 nnoremap B ^
@@ -171,12 +176,12 @@ nmap <C-n> :NERDTreeToggle<CR>
 
 " Syntastic
 function! ToggleErrors()
-    let old_last_winnr = winnr('$')
-    lclose
-    if old_last_winnr == winnr('$')
-        " Nothing was closed, open syntastic error location panel
-        Errors
-    endif
+  let old_last_winnr = winnr('$')
+  lclose
+  if old_last_winnr == winnr('$')
+    " Nothing was closed, open syntastic error location panel
+    Errors
+  endif
 endfunction
 
 nnoremap <silent> <C-e> :<C-u>call ToggleErrors()<CR>
@@ -212,3 +217,6 @@ let g:SuperTabDefaultCompletionType = '<C-n>'
 let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
+" Weird colors for gitgutter, etc
+hi clear SignColumn

@@ -34,6 +34,7 @@ export PATH=/usr/local/bin:$PATH
 function lcd () {
   cd "$@" && ls
 }
+<<<<<<< HEAD
 
 # Set keybindings for vim mode by default
 bindkey -v
@@ -45,3 +46,5 @@ alias lock='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resour
 alias wsj='wsj.app -r ~/Developer/tesla-repos/wsj/'
 alias ls='ls -l'
 alias light='~/Applications/light'
+=======
+>>>>>>> 8057aaa11a4aac4b71e0877d4582ffd561bf9510
