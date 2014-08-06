@@ -22,15 +22,8 @@ export LSCOLORS=Gxfxcxdxbxegedabagacad
 export GREP_OPTIONS='--color=auto'
 export GREP_COLOR='3;33'
 
-# Aliases
-alias cl='clear'
-alias vim='mvim -v'
-alias mongo-up='sudo mongod --fork --smallfiles --logpath /data/db/mongo.log --dbpath /data/db'
-alias lock='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
-alias wsj='wsj.app -r ~/Developer/tesla-repos/wsj/'
-
 # Specify plugins for ZSH
-plugins=(git, brew, osx)
+plugins=(git, brew, osx, docker, node, npm)
 source $ZSH/oh-my-zsh.sh
 
 # Path variables
@@ -44,4 +37,11 @@ function lcd () {
 
 # Set keybindings for vim mode by default
 bindkey -v
-
+# Aliases
+alias cl='clear'
+alias vim='mvim -v'
+alias mongo-up='sudo mongod --fork --smallfiles --logpath /data/db/mongo.log --dbpath /data/db'
+alias lock='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
+alias wsj='wsj.app -r ~/Developer/tesla-repos/wsj/'
+alias ls='ls -l'
+alias light='~/Applications/light'

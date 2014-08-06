@@ -39,6 +39,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'tpope/vim-fugitive'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'Yggdroot/indentLine'
+Plugin 'marijnh/tern_for_vim'
 
 " ...All your other bundles...
 if hasVundle == 0
