@@ -1,8 +1,7 @@
 #!/bin/bash
 #
-# Author:   Christian Sherland
-# Created:  6/23/14
-# Modified: 6/27/14
+# Author:   Sameer Chauhan
+# Based off work by Christian Sherland
 #
 # install.sh
 #   Setup script for my dotfiles on an OSX machine. Also installs
