@@ -1,5 +1,5 @@
 "
-"	Christian Sherland
+" Based off of work by	Christian Sherland
 "	    .vimrc
 "
 "
@@ -32,12 +32,10 @@ Plugin 'bronson/vim-trailing-whitespace'
 Plugin 'ervandew/supertab'
 Plugin 'honza/vim-snippets'
 Plugin 'pangloss/vim-javascript'
-Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'SirVer/ultisnips'
-Plugin 'tpope/vim-fugitive'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'Yggdroot/indentLine'
 Plugin 'marijnh/tern_for_vim'
@@ -200,14 +198,6 @@ let g:airline#extensions#bufferline#enabled = 0
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#syntastic#enabled = 1
 
-" Fugitive
-nmap <silent> <leader>gs :Gstatus<CR>
-nmap <silent> <leader>gd :Gdiff<CR>
-nmap <silent> <leader>gc :Gcommit<CR>
-nmap <silent> <leader>gb :Gblame<CR>
-nmap <silent> <leader>gl :Glog<CR>
-nmap <silent> <leader>gp :Git push<CR>
-
 " make YCM compatible with UltiSnips (using supertab)
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
 let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
@@ -218,5 +208,8 @@ let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
+let g:SuperTabClosePreviewOnPopupClose = 1
+
+" make YCM compatible with UltiSnips (using supertab)
 " Weird colors for gitgutter, etc
 hi clear SignColumn

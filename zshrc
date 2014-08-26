@@ -86,3 +86,4 @@ alias lock='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resour
 alias wsj='wsj.app -r ~/Developer/tesla-repos/wsj/'
 alias ls='ls -l'
 alias light='~/Applications/light'
+alias projects='~/Documents/Projects/'
