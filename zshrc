@@ -1,5 +1,6 @@
 #
-# Christian sherland
+# Sameer Chauhan
+# Based of Work by Christian Sherland
 # .zshrc
 #   Zshell configurations
 #
@@ -38,7 +39,6 @@ function lcd () {
 # bindkey -v
 
 # Special keys to work:
-
 # create a zkbd compatible hash;
 # to add other keys to this hash, see: man 5 terminfo
 typeset -A key
@@ -83,7 +83,5 @@ alias cl='clear'
 alias vim='mvim -v'
 alias mongo-up='sudo mongod --fork --smallfiles --logpath /data/db/mongo.log --dbpath /data/db'
 alias lock='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
-alias wsj='wsj.app -r ~/Developer/tesla-repos/wsj/'
-alias ls='ls -l'
-alias light='~/Applications/light'
+# alias wsj='wsj.app -r ~/Developer/tesla-repos/wsj/'
 alias projects='~/Documents/Projects/'
