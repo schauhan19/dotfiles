@@ -33,7 +33,7 @@ export PATH=/usr/local/bin:$PATH
 
 # Custom functions
 function lcd () {
-  cd "$@" && ls
+  cd "$@" && ll
 }
 # Set keybindings for vim mode by default
 # bindkey -v
@@ -76,6 +76,9 @@ function zle-line-finish () {
 zle -N zle-line-init
 zle -N zle-line-finish
 
+unalias run-help
+autoload run-help
+HELPDIR=/usr/local/share/zsh/helpfiles
 
 
 # Aliases
@@ -85,3 +88,4 @@ alias mongo-up='sudo mongod --fork --smallfiles --logpath /data/db/mongo.log --d
 alias lock='/System/Library/CoreServices/"Menu Extras"/User.menu/Contents/Resources/CGSession -suspend'
 # alias wsj='wsj.app -r ~/Developer/tesla-repos/wsj/'
 alias projects='~/Documents/Projects/'
+alias personal='~/Documents/Personal/'

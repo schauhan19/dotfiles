@@ -13,7 +13,7 @@
 cd ~
 
 # Homebrew! (and related setup)
-ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 echo export PATH='/usr/local/bin:$PATH' >> ~/.bashrc
 source ~/.bashrc
 
@@ -24,17 +24,19 @@ brew install htop
 brew install macvim --override-system-vim
 brew install wget
 brew install zsh
+brew install node
+
 
 # Some useful casks (non app-store apps)
-brew cask install adium
+#brew cask install adium
 brew cask install atom
-brew cask install dropbox
-brew cask install google-chrome
+#brew cask install dropbox
+#brew cask install google-chrome
 brew cask install iterm2
 brew cask install skype
 brew cask install shuttle
 brew cask install spotify
-brew cask install steam
+#brew cask install steam
 brew cask install vlc
 
 # Inconsolata font, because it's awesome
@@ -43,7 +45,7 @@ brew cask install font-inconsolata-dz-for-powerline
 
 # Oh-my-zsh and zshrc
 curl -L http://install.ohmyz.sh | sh
-sudo chsh -s $(whoami) $(which zsh)
+chsh -s $(which zsh)
 rm ~/.zshrc
 ln -s ~/.dotfiles/zshrc ~/.zshrc
 source ~/.zshrc
@@ -75,7 +77,7 @@ ln -s ~/.dotfiles/config.cson ~/.atom/config.cson
 defaults write com.googlecode.iterm2 PrefsCustomFolder "/Users/$(whoami)/.dotfiles/"
 
 # Global gitignore
-ln -s ~/.dotfiles/gitignore_global ~/.gitignore_global
+ln -s ~/.dotfiles/gitignore_global ~/.gitignore
 git config --global core.excludesfile '~/.gitignore'
 
 # Configure git user (You will likely want to change this)
@@ -85,4 +87,3 @@ git config --global user.email schauhan19@gmail.com
 # Configure htop to display information properly (requires sudo)
 sudo chown root:wheel /usr/local/Cellar/htop-osx/0.8.2.2/bin/htop
 sudo chmod u+s /usr/local/Cellar/htop-osx/0.8.2.2/bin/htop
-
