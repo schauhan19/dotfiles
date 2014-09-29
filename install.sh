@@ -83,6 +83,8 @@ git config --global core.excludesfile '~/.gitignore'
 # Configure git user (You will likely want to change this)
 git config --global user.name "Sameer"
 git config --global user.email schauhan19@gmail.com
+git config --global url."https://github".insteadOf git://github
+
 
 # Configure htop to display information properly (requires sudo)
 sudo chown root:wheel /usr/local/Cellar/htop-osx/0.8.2.2/bin/htop
